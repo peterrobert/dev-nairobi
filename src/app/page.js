@@ -1,7 +1,9 @@
-import CaseStudiesSection from "./pages/landing-page/CaseStudiesSection";
-import HeroSection from "./pages/landing-page/HeroSection";
-import ProblemSection from "./pages/landing-page/ProblemSection";
-import SolutionSection from "./pages/landing-page/SolutionSection";
+import CaseStudiesSection from "./landing-page/CaseStudiesSection";
+import CtaSection from "./landing-page/CtaSection";
+import HeroSection from "./landing-page/HeroSection";
+import ProblemSection from "./landing-page/ProblemSection";
+import ProcessSection from "./landing-page/ProcessSection";
+import SolutionSection from "./landing-page/SolutionSection";
 
 export default function Home() {
   return (
@@ -10,6 +12,8 @@ export default function Home() {
       <ProblemSection />
       <SolutionSection />
       <CaseStudiesSection />
+      <ProcessSection />
+      <CtaSection />
     </>
   );
 }
