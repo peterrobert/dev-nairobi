@@ -4,7 +4,6 @@ import TechStackSection from "./TechStackSection";
 import ProjectGrid from "./ProjectGrid";
 import MetricsSection from "./MetricsSection";
 import CtaSection from "./CtaSection";
-import StickySection from "../componets/StickySection";
 
 const Portfolio = () => {
   return (
