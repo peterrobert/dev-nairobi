@@ -75,8 +75,12 @@ const NavBar = () => {
           </Link>
 
           <Link
-            href="#pricing"
-            className="text-slate-500 hover:text-brand-navy font-medium text-sm transition-colors"
+            href="/price-page"
+            className={
+              isActive("/price-page")
+                ? "text-brand-navy font-medium text-sm border-b-2 border-brand-navy py-7"
+                : "text-slate-500 hover:text-brand-navy font-medium text-sm transition-colors"
+            }
           >
             Pricing
           </Link>
