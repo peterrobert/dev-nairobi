@@ -40,3 +40,29 @@ body {
 .mesh-bg {
   background-image: radial-gradient(at 40% 20%, hsla(228, 100%, 74%, 0.15) 0px, transparent 50%), radial-gradient(at 80% 0%, hsla(189, 100%, 56%, 0.15) 0px, transparent 50%), radial-gradient(at 0% 50%, hsla(355, 100%, 93%, 0.1) 0px, transparent 50%);
 }
+
+.step-connector {
+  position: absolute;
+  left: 24px;
+  top: 48px;
+  bottom: -24px;
+  width: 2px;
+  background: #e2e8f0;
+  z-index: 0;
+}
+
+@media (min-width: 1024px) {
+  .step-connector {
+    display: none;
+  }
+
+  .step-connector-horizontal {
+    position: absolute;
+    top: 24px;
+    left: 48px;
+    right: -24px;
+    height: 2px;
+    background: #e2e8f0;
+    z-index: 0;
+  }
+}

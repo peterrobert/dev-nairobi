@@ -86,10 +86,14 @@ const NavBar = () => {
           </Link>
 
           <Link
-            href="#process"
-            className="text-slate-500 hover:text-brand-navy font-medium text-sm transition-colors"
+            href="/process-page"
+            className={
+              isActive("/process-page")
+                ? "text-brand-navy font-medium text-sm border-b-2 border-brand-navy py-7"
+                : "text-slate-500 hover:text-brand-navy font-medium text-sm transition-colors"
+            }
           >
-            Process
+            Our Process
           </Link>
         </div>
 
