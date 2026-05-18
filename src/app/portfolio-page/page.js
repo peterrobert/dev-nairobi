@@ -14,7 +14,6 @@ const Portfolio = () => {
       <ProjectGrid />
       <MetricsSection />
       <CtaSection />
-      <StickySection />
     </>
   );
 };

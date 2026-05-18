@@ -12,7 +12,6 @@ const Services = () => {
       <ServiceGrid />
       <ServiceDetailsSection />
       <CtaSection />
-      <StickySection />
     </>
   );
 };

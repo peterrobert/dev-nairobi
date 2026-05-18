@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "./componets/NavBar";
 import Footer from "./componets/Footer";
+import StickySection from "./componets/StickySection";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
         <NavBar />
         {children}
         <Footer />
+        <StickySection />
       </body>
     </html>
   );
