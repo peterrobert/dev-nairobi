@@ -30,3 +30,13 @@ body {
   background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(10px);
 }
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.mesh-bg {
+  background-image: radial-gradient(at 40% 20%, hsla(228, 100%, 74%, 0.15) 0px, transparent 50%), radial-gradient(at 80% 0%, hsla(189, 100%, 56%, 0.15) 0px, transparent 50%), radial-gradient(at 0% 50%, hsla(355, 100%, 93%, 0.1) 0px, transparent 50%);
+}

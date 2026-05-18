@@ -1,8 +1,13 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
+import { usePathname } from "next/navigation";
 
 const NavBar = () => {
+  const pathname = usePathname();
+
+  const isActive = (path) => pathname === path;
   return (
     <nav
       id="header"
@@ -26,29 +31,56 @@ const NavBar = () => {
 
         <div className="hidden lg:flex items-center gap-8">
           <Link
-            href="#"
-            className="text-brand-navy font-medium text-sm border-b-2 border-brand-navy py-7"
+            href="/"
+            className={
+              isActive("/")
+                ? "text-brand-navy font-medium text-sm border-b-2 border-brand-navy py-7"
+                : "text-slate-500 hover:text-brand-navy font-medium text-sm transition-colors"
+            }
           >
             Home
           </Link>
+
           <Link
-            href="#services"
-            className="text-slate-500 hover:text-brand-navy font-medium text-sm transition-colors"
+            href="/service-page"
+            className={
+              isActive("/service-page")
+                ? "text-brand-navy font-medium text-sm border-b-2 border-brand-navy py-7"
+                : "text-slate-500 hover:text-brand-navy font-medium text-sm transition-colors"
+            }
           >
             Services
           </Link>
+
           <Link
-            href="#portfolio"
-            className="text-slate-500 hover:text-brand-navy font-medium text-sm transition-colors"
+            href="/portfolio-page"
+            className={
+              isActive("/portfolio-page")
+                ? "text-brand-navy font-medium text-sm border-b-2 border-brand-navy py-7"
+                : "text-slate-500 hover:text-brand-navy font-medium text-sm transition-colors"
+            }
           >
             Portfolio
           </Link>
+
+          <Link
+            href="/founder-page"
+            className={
+              isActive("/founder-page")
+                ? "text-brand-navy font-medium text-sm border-b-2 border-brand-navy py-7"
+                : "text-slate-500 hover:text-brand-navy font-medium text-sm transition-colors"
+            }
+          >
+            Founder
+          </Link>
+
           <Link
             href="#pricing"
             className="text-slate-500 hover:text-brand-navy font-medium text-sm transition-colors"
           >
             Pricing
           </Link>
+
           <Link
             href="#process"
             className="text-slate-500 hover:text-brand-navy font-medium text-sm transition-colors"
