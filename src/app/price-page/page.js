@@ -2,6 +2,7 @@ import React from "react";
 import HeroSection from "./HeroSection";
 import PricePackages from "./PricePackages";
 import ComparisonTable from "./ComparisonTable";
+import CtaSection from "./CtaSection";
 
 const Price = () => {
   return (
@@ -9,6 +10,7 @@ const Price = () => {
       <HeroSection />
       <PricePackages />
       <ComparisonTable />
+      <CtaSection />
     </>
   );
 };
