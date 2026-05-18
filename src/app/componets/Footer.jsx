@@ -2,58 +2,95 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer id="footer" className="bg-dark border-t border-white/5 pt-16 pb-8">
-      <div className="max-w-360 mx-auto px-6 lg:px-12">
-        <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-8 mb-12 border-b border-white/5 pb-12">
-          <div className="text-center md:text-left">
-            <a
-              href="#"
-              className="flex items-center gap-2 justify-center md:justify-start mb-4"
-            >
-              <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-white font-bold text-xl">
-                D
-              </div>
-              <span className="font-display font-semibold text-xl tracking-wide text-white">
-                DevNairobi
-              </span>
-            </a>
-            <p className="text-gray-500 text-sm max-w-xs">
-              Premium web development for service businesses in Nairobi, Kenya.
-            </p>
+    <footer
+      id="footer"
+      className="bg-slate-900 pt-20 pb-10 px-6 border-t border-slate-800"
+    >
+      <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-12 mb-16">
+        <div className="col-span-2 md:col-span-1">
+          <div className="flex items-center gap-2 mb-6">
+            <div className="w-8 h-8 rounded-lg bg-brand-emerald flex items-center justify-center text-white font-bold text-xl">
+              N
+            </div>
+            <span className="font-bold text-xl text-white tracking-tight">
+              NairobiWeb
+            </span>
           </div>
-
-          <div className="flex gap-6">
-            <a
-              href="#"
-              className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-all border border-white/5"
-            >
-              <i className="fa-brands fa-twitter"></i>
-            </a>
-            <a
-              href="#"
-              className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-all border border-white/5"
-            >
-              <i className="fa-brands fa-linkedin-in"></i>
-            </a>
-            <a
-              href="#"
-              className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-all border border-white/5"
-            >
-              <i className="fa-brands fa-github"></i>
-            </a>
-          </div>
+          <p className="text-slate-400 text-sm leading-relaxed">
+            Premium web design and development for ambitious Kenyan businesses.
+          </p>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-600">
-          <p>&copy; 2026 DevNairobi. All rights reserved.</p>
-          <div className="flex gap-6">
-            <a href="#" className="hover:text-gray-300 transition-colors">
-              Privacy Policy
-            </a>
-            <a href="#" className="hover:text-gray-300 transition-colors">
-              Terms of Service
-            </a>
-          </div>
+        <div>
+          <h4 className="text-white font-semibold mb-4">Services</h4>
+          <ul className="space-y-3 text-sm text-slate-400">
+            <li>
+              <a
+                href="#"
+                className="hover:text-brand-emerald transition-colors"
+              >
+                Web Design
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="hover:text-brand-emerald transition-colors"
+              >
+                Landing Pages
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="hover:text-brand-emerald transition-colors"
+              >
+                SEO Optimization
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 className="text-white font-semibold mb-4">Company</h4>
+          <ul className="space-y-3 text-sm text-slate-400">
+            <li>
+              <a
+                href="#"
+                className="hover:text-brand-emerald transition-colors"
+              >
+                Portfolio
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="hover:text-brand-emerald transition-colors"
+              >
+                Process
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="hover:text-brand-emerald transition-colors"
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+        <p>&copy; 2024 NairobiWeb Agency. All rights reserved.</p>
+        <div className="flex gap-4">
+          <a href="#" className="hover:text-white transition-colors">
+            Privacy Policy
+          </a>
+          <a href="#" className="hover:text-white transition-colors">
+            Terms of Service
+          </a>
         </div>
       </div>
     </footer>

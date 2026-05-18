@@ -1,65 +1,76 @@
 import Link from "next/link";
+import Image from "next/image";
 import React from "react";
 
 const NavBar = () => {
   return (
-    <div
+    <nav
       id="header"
-      className="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300"
+      className="fixed w-full z-50 glass-nav border-b border-slate-100 transition-all duration-300"
     >
-      <div className="max-w-360 mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
-        <Link href="#" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-white font-bold text-xl group-hover:scale-105 transition-transform">
-            D
+      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <div className="flex items-center gap-2">
+          <div className="w-8 h-8 rounded-lg bg-brand-navy flex items-center justify-center overflow-hidden">
+            <Image
+              src="/leadForge.png"
+              alt="Logo"
+              width={50}
+              height={50}
+              className="object-cover"
+            />
           </div>
-          <span className="font-display font-semibold text-xl tracking-wide text-white">
-            DevNairobi
+          <span className="font-bold text-xl text-brand-navy tracking-tight">
+            Leadforge Studio
           </span>
-        </Link>
+        </div>
 
-        {/* <!-- Desktop Nav --> */}
-        <nav className="hidden md:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-8">
           <Link
-            href="/"
-            className="text-sm font-medium text-white hover:text-primary transition-colors"
+            href="#"
+            className="text-brand-navy font-medium text-sm border-b-2 border-brand-navy py-7"
           >
             Home
           </Link>
           <Link
-            href="/work-page"
-            className="text-sm font-medium text-gray-400 hover:text-primary transition-colors"
+            href="#services"
+            className="text-slate-500 hover:text-brand-navy font-medium text-sm transition-colors"
           >
-            Work
+            Services
           </Link>
           <Link
-            href="#"
-            cllinkssName="text-sm font-medium text-gray-400 hover:text-primary transition-colors"
+            href="#portfolio"
+            className="text-slate-500 hover:text-brand-navy font-medium text-sm transition-colors"
           >
-            About Us
+            Portfolio
           </Link>
           <Link
-            href="#"
-            className="text-sm font-medium text-gray-400 hover:text-primary transition-colors"
+            href="#pricing"
+            className="text-slate-500 hover:text-brand-navy font-medium text-sm transition-colors"
           >
-            Contact
+            Pricing
           </Link>
-        </nav>
-
-        <div className="hidden md:flex items-center gap-4">
           <Link
-            href="#"
-            className="h-10 px-6 rounded-full bg-white text-black font-semibold text-sm flex items-center hover:bg-gray-100 transition-colors"
+            href="#process"
+            className="text-slate-500 hover:text-brand-navy font-medium text-sm transition-colors"
           >
-            Get a Free Website Review
+            Process
           </Link>
         </div>
 
-        {/* <!-- Mobile Menu Button --> */}
-        <button className="md:hidden text-gray-300 hover:text-white p-2">
-          <i className="fa-solid fa-bars text-xl"></i>
-        </button>
+        <div className="flex items-center gap-4">
+          <Link
+            href="#"
+            className="hidden md:flex items-center gap-2 text-brand-emerald font-medium text-sm hover:text-emerald-600 transition-colors"
+          >
+            <i className="fa-brands fa-whatsapp text-lg"></i>
+            <span>Chat</span>
+          </Link>
+          <button className="bg-brand-navy hover:bg-blue-900 text-white px-6 py-2.5 rounded-full text-sm font-medium transition-all shadow-sm hover:shadow-md">
+            Book Audit
+          </button>
+        </div>
       </div>
-    </div>
+    </nav>
   );
 };
 
