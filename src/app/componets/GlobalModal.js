@@ -28,14 +28,14 @@ export default function GlobalModal() {
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed inset-0 z-50 flex items-end sm:items-center justify-center"
+          className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-3 sm:p-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
         >
-          {/* BACKDROP */}
+          {/* BACKDROP (soft blue-tinted, not pure black) */}
           <motion.div
-            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+            className="absolute inset-0 bg-brand-navy/70 backdrop-blur-md"
             onClick={closeModal}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -45,19 +45,20 @@ export default function GlobalModal() {
           {/* MODAL */}
           <motion.div
             className="
-          relative w-full 
-          sm:max-w-5xl 
-          bg-white 
-          rounded-t-3xl sm:rounded-3xl 
-          shadow-2xl 
+          relative w-full
+          sm:max-w-5xl
+          bg-white
+          rounded-t-3xl sm:rounded-3xl
+          shadow-2xl
           overflow-hidden
-          max-h-[90vh] sm:max-h-[85vh]
+          max-h-[92vh] sm:max-h-[85vh]
           flex flex-col
+          border border-blue-100/30
         "
             initial={{
               opacity: 0,
-              y: 40,
-              scale: 0.98,
+              y: 60,
+              scale: 0.97,
             }}
             animate={{
               opacity: 1,
@@ -66,32 +67,44 @@ export default function GlobalModal() {
             }}
             exit={{
               opacity: 0,
-              y: 30,
+              y: 40,
               scale: 0.98,
             }}
             transition={{
-              duration: 0.2,
-              ease: "easeOut",
+              duration: 0.28,
+              ease: [0.16, 1, 0.3, 1],
             }}
           >
-            {/* HEADER / CLOSE AREA */}
-            <div className="sticky top-0 z-10 flex justify-end p-3 sm:p-4 bg-white/80 backdrop-blur border-b border-gray-100">
+            {/* TOP ACCENT BAR (brand identity reinforcement) */}
+            <div className="h-1 w-full bg-linear-to-r from-brand-emerald via-blue-500 to-brand-navy" />
+
+            {/* HEADER */}
+            <div className="sticky top-0 z-10 flex justify-between items-center p-3 sm:p-4 bg-white/80 backdrop-blur border-b border-blue-50">
+              {/* optional title area (future-proofing) */}
+              <div className="text-sm font-medium text-brand-navy">
+                {/* can show modal title later */}
+              </div>
+
               <button
                 onClick={closeModal}
                 className="
-              w-9 h-9 sm:w-10 sm:h-10 
-              rounded-full 
-              bg-gray-100 hover:bg-gray-200 
+              w-9 h-9 sm:w-10 sm:h-10
+              rounded-full
+              bg-blue-50 hover:bg-blue-100
+              text-brand-navy
               flex items-center justify-center
               active:scale-95 transition
+              border border-blue-100
             "
               >
                 ✕
               </button>
             </div>
 
-            {/* CONTENT AREA (IMPORTANT FIX) */}
-            <div className="overflow-y-auto flex-1">{renderContent()}</div>
+            {/* CONTENT */}
+            <div className="overflow-y-auto flex-1 bg-linear-to-b from-white to-blue-50/30">
+              {renderContent()}
+            </div>
           </motion.div>
         </motion.div>
       )}
