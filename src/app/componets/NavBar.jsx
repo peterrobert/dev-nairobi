@@ -112,7 +112,7 @@ const NavBar = () => {
           </Link>
           <button
             onClick={() => navigateToBookPage()}
-            className="bg-brand-navy hover:bg-blue-900 text-white px-6 py-2.5 rounded-full text-sm font-medium transition-all shadow-sm hover:shadow-md"
+            className="bg-brand-navy cursor-pointer hover:bg-blue-900 text-white px-6 py-2.5 rounded-full text-sm font-medium transition-all shadow-sm hover:shadow-md"
           >
             Book Audit
           </button>
