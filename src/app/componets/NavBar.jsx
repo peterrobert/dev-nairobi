@@ -3,11 +3,16 @@ import Link from "next/link";
 import Image from "next/image";
 import React from "react";
 import { usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 const NavBar = () => {
   const pathname = usePathname();
+  const router = useRouter();
 
   const isActive = (path) => pathname === path;
+  const navigateToBookPage = () => {
+    router.push("/audit-page");
+  };
   return (
     <nav
       id="header"
@@ -105,7 +110,10 @@ const NavBar = () => {
             <i className="fa-brands fa-whatsapp text-lg"></i>
             <span>Chat</span>
           </Link>
-          <button className="bg-brand-navy hover:bg-blue-900 text-white px-6 py-2.5 rounded-full text-sm font-medium transition-all shadow-sm hover:shadow-md">
+          <button
+            onClick={() => navigateToBookPage()}
+            className="bg-brand-navy hover:bg-blue-900 text-white px-6 py-2.5 rounded-full text-sm font-medium transition-all shadow-sm hover:shadow-md"
+          >
             Book Audit
           </button>
         </div>
