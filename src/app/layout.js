@@ -3,6 +3,7 @@ import "./globals.css";
 import NavBar from "./componets/NavBar";
 import Footer from "./componets/Footer";
 import StickySection from "./componets/StickySection";
+import GlobalModal from "./componets/GlobalModal";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
         {children}
         <Footer />
         <StickySection />
+        <GlobalModal />
       </body>
     </html>
   );
