@@ -29,7 +29,7 @@ const WhatIncludedSection = () => {
           <div className="lg:w-2/3 grid sm:grid-cols-2 gap-6">
             {/* <!-- Feature Item --> */}
             <div className="bg-white p-6 rounded-3xl shadow-sm border border-gray-100 flex gap-4 items-start">
-              <div className="w-12 h-12 rounded-xl bg-brand-tealLight flex-shrink-0 flex items-center justify-center text-brand-teal text-xl">
+              <div className="w-12 h-12 rounded-xl bg-brand-tealLight shrink-0 flex items-center justify-center text-brand-teal text-xl">
                 <i className="fa-solid fa-bolt"></i>
               </div>
               <div>
@@ -42,7 +42,7 @@ const WhatIncludedSection = () => {
 
             {/* <!-- Feature Item --> */}
             <div className="bg-white p-6 rounded-3xl shadow-sm border border-gray-100 flex gap-4 items-start">
-              <div className="w-12 h-12 rounded-xl bg-brand-terracottaLight flex-shrink-0 flex items-center justify-center text-brand-terracotta text-xl">
+              <div className="w-12 h-12 rounded-xl bg-brand-terracottaLight shrink-0 flex items-center justify-center text-brand-terracotta text-xl">
                 <i className="fa-solid fa-crop-simple"></i>
               </div>
               <div>
@@ -56,7 +56,7 @@ const WhatIncludedSection = () => {
 
             {/* <!-- Feature Item --> */}
             <div className="bg-white p-6 rounded-3xl shadow-sm border border-gray-100 flex gap-4 items-start">
-              <div className="w-12 h-12 rounded-xl bg-blue-50 flex-shrink-0 flex items-center justify-center text-blue-500 text-xl">
+              <div className="w-12 h-12 rounded-xl bg-blue-50 shrink-0 flex items-center justify-center text-blue-500 text-xl">
                 <i className="fa-solid fa-magnifying-glass"></i>
               </div>
               <div>
@@ -69,7 +69,7 @@ const WhatIncludedSection = () => {
 
             {/* <!-- Feature Item --> */}
             <div className="bg-white p-6 rounded-3xl shadow-sm border border-gray-100 flex gap-4 items-start">
-              <div className="w-12 h-12 rounded-xl bg-green-50 flex-shrink-0 flex items-center justify-center text-green-500 text-xl">
+              <div className="w-12 h-12 rounded-xl bg-green-50 shrink-0 flex items-center justify-center text-green-500 text-xl">
                 <i className="fa-solid fa-bullseye"></i>
               </div>
               <div>
