@@ -88,6 +88,7 @@ export default function GlobalModal() {
               <button
                 onClick={closeModal}
                 className="
+                 cursor-pointer
               w-9 h-9 sm:w-10 sm:h-10
               rounded-full
               bg-blue-50 hover:bg-blue-100
